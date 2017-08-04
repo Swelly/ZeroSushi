@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Zero — Sushi, Smoothies and Juice Bar</title>
+        <meta name="description" content="Zero. A trendy, bespoke Juice and Sushi outlet. Located in Berkhamsted and Harpenden">
+        <meta name="keywords" content="sushi, berkhamsted, harpenden, uk, japanese, healthy, juice, lunch, snack, cheap, food, goodfood, eat, wifi, smoothies, smoothie">
+        <meta name="author" content="Wesley Magness">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" href="css/compiled.min.css">
+        <!-- Scripts -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>
+            window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+        </script>
+        <script>
+            var isMobile = navigator.userAgent.match(/(iPhone|iPod|Android|BlackBerry)/);
+            if(!isMobile) {
+                document.write('<script src="js/map.js"><\/script>');
+            }
+        </script>
+        <!-- Slick Slider -->
+        <script type="text/javascript" src="js/slick.min.js"></script>
+        <script type="text/javascript" src="js/landing.js"></script>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="images/favicon.png">
+    </head>
+
+    <body>
+        <!-- Hidden Nav -->
+        <nav class="fixed top-nav hidden" id="topNav">
+            <div class="container status-container">
+                <div id="business-status" class=""></div>
+            </div>
+        </nav>
+        <!-- Intro -->
+        <aside class="intro section" id="bg-intro" >
+            <figure class="vert-center">
+                <img id="logo" src="images/ZeroSushi.png" width="329" height="354" alt="Logo" class="logo"/>
+            </figure>
+        </aside>
+        <!-- End Intro -->
+
+        <!-- About -->
+        <a name="about" class="anchor"></a>
+        <div class="about section">
+            <div class="container">
+                <div class="row">
+                    <div class="six columns zero-info">
+                        <div class="title-box">
+                            <h2>ZERO</h2>
+                            <a id="address-link" href="https://goo.gl/aA6lKM" target="_blank" title="View location in Google Maps">
+                                <span>8 - 12 Lower Kings Road, Berkhamsted</span><br />
+                                <span>+44 1442 877982</span>
+                            </a>
+                            <br />
+                            <a id="address-link" href="https://goo.gl/CEU4eS" target="_blank" title="View second location in Google Maps">
+                                <span>8 Leyton Road, Harpenden</span><br />
+                                <span>+44 1582 762009</span>
+                            </a>
+                            <br /><br />
+                        </div>
+                        <div class="hour-block">
+                            <h3>Monday - Saturday</h3>
+                            <p>9:00 <span class="open-hours">-</span> 17:00</p>
+                        </div>
+                        <span class="solid-circle">&#9679;</span>
+                            <a href="mailto:zerojuicesushi@gmail.com" id="email">
+                                zerojuicesushi@gmail.com
+                            </a>
+                        <span class="solid-circle">&#9679;</span>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/ZeroBerkhamsted" title="Our Facebook">
+                                <img src="images/social/social_facebook.png" alt="Zero on Facebook" width="25px" class="icon">
+                            </a>
+                            <a href="https://twitter.com/ZeroJuiceSushi">
+                                <img src="images/social/social_twitter.png" alt="Zero on Twitter" width="25px" class="icon">
+                            </a>
+                            <a href="https://instagram.com/zerojuicesushi/">
+                                <img src="images/social/social_instagram.png" alt="Zero on Instagram" width="25px" class="icon">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Google Maps -->
+                    <div class="six columns">
+                        <div id="map-canvas"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End About -->
+
+        <a name="menu" class="anchor"></a>
+        <div class="menu section">
+            <h1 id="mobile-menu-hint" class="hidden">Tap a Menu to View</h1>
+            <div class="twelve menu-board" id="sushi-menu">
+                <h2>Sushi</h2>
+                <ul>
+                    <li class="six columns">
+                        <p class="item-title">Spicy Tuna</p>
+                        <p class="item-description">tuna, spring onions, cucumber, spicy saize, mango shichimi</p>
+                        <p class="item-price">4.5</p>
+                    </li>
+
+                    <li class="six columns">
+                        <p class="item-title">Wasabi Salmon</p>
+                        <p class="item-description">salmon, avocado, mayo, wasabi tobiko</p>
+                        <p class="item-price">4.0</p>
+                    </li>
+
+                    <li class="six columns">
+                        <p class="item-title">Prawn Tempura</p>
+                        <p class="item-description">prawn tempura, avocado, tangy sauce, sesame</p>
+                        <p class="item-price">4.5</p>
+                    </li>
+
+                    <li class="six columns">
+                        <p class="item-title">California</p>
+                        <p class="item-description">crab, cucumber, avocado, tangy sauce, tobiko</p>
+                        <p class="item-price">4.0</p>
+                    </li>
+
+                    <li class="six columns">
+                        <p class="item-title">Nigiri</p>
+                        <p class="item-description">the freshest ingredients on top of hand-pressed mounds of rice</p>
+                        <p class="item-price">4.5/6.5</p>
+                    </li>
+                    
+                   <li class="six columns">
+                        <p class="item-title">Hosomaki</p>
+                        <p class="item-description">cucumber, avocado, tuna</p>
+                        <p class="item-price">4.5/6.5</p>
+                    </li>
+
+                    <li class="six columns">
+                        <p class="item-title">Temaki</p>
+                        <p class="item-description">5/6 pounds - tuna or salmon hand roll</p>
+                        <p class="item-price">5.0 (salmon) | 6.0 (tuna)</p>
+                    </li>
+
+                    <li class="six columns">
+                        <p class="item-title">Teriyaki Chicken</p>
+                        <p class="item-description">chicken katsu, cucumber shichimi, teriyaki sauce</p>
+                        <p class="item-price">4.0</p>
+                    </li>
+
+                    <li class="six columns">
+                        <p class="item-title">Zero Veggie</p>
+                        <p class="item-description">house vegetarian roll</p>
+                        <p class="item-price">3.5</p>
+                    </li>
+
+                    <li class="six columns">
+                        <p class="item-title">Sashimi</p>
+                        <p class="item-description">the finest cuts of sashimi grade fish</p>
+                        <p class="item-price">6.0</p>
+                    </li>
+
+                    <li class="six columns special-roll">
+                        <p class="item-title">Dragon</p>
+                        <p class="item-description">eel, avocado, spring onion, sesame, eel sauce</p>
+                        <p class="item-price">11.5</p>
+                    </li>
+
+                    <li class="six columns special-roll">
+                        <p class="item-title">Dynamite</p>
+                        <p class="item-description">eel, spring onion, cucumber, topped with avocado and eel sauce</p>
+                        <p class="item-price">10.0</p>
+                    </li>
+
+                    <li class="six columns special-roll">
+                        <p class="item-title">Rainbow</p>
+                        <p class="item-description">salmon, tuna, avocado, red pepper, tobiko</p>
+                        <p class="item-price">9.0</p>
+                    </li>
+
+                    <li class="six columns special-roll">
+                        <p class="item-title">Crunch</p>
+                        <p class="item-description">tuna, prawn tempura, avocado, spring onion, spicy sauce</p>
+                        <p class="item-price">11.0</p>
+                    </li>
+
+                    <li class="six columns special-roll">
+                        <p class="item-title">ZERO</p>
+                        <p class="item-description">house special roll</p>
+                        <p class="item-price">10.5</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="twelve menu-board" id="sushi-platters">
+                <h2>Sushi Platters</h2>
+                <ul>
+                    <li class="six columns">
+                        <p class="item-title">SMALL STARTING FROM 20.0</p>
+                        <p class="item-description">a selection of our sushi rolls, hosomaki & nigiri</p>
+                    </li>
+                    
+                    <li class="six columns">
+                        <p class="item-title">LARGE STARTING FROM 30.0</p>
+                        <p class="item-description">a selection of our sashimi sushi rolls, nigiri & house rolls</p>
+                    </li>
+                    
+                    <li class="six columns">
+                        <p class="item-title">ALL PLATTERS CAN BE MADE TO YOUR SPECIFICATION</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="twelve menu-board" id="hot-foods">
+                <h2>Hot Food</h2>
+                <ul>
+                    <li class="six columns">
+                        <p class="item-title">Miso Soup
+                            <span class="item-price">1.99</span>
+                        </p>
+                    </li>
+
+                    <li class="six columns">
+                        <p class="item-title">Prawn Katsu
+                            <span class="item-price">5.99</span>
+                        </p>
+                    </li>
+
+                    <li class="six columns">
+                        <p class="item-title">Salmon Teriyaki
+                            <span class="item-price">5.5</span>
+                        </p>
+                    </li>
+
+                    <li class="six columns">
+                        <p class="item-title">Gyoza
+                            <span class="item-price">3.99</span>
+                        </p>
+                        <p class="item-description-small">Chicken, Duck or Vegetable</p>
+                    </li>
+
+                    <li class="six columns">
+                        <p class="item-title">Katsu Curry
+                            <span class="item-price">4.99</span>
+                        </p>
+                    </li>
+
+                    <li class="six columns">
+                        <p class="item-title">Kamakaze Wings
+                            <span class="item-price">4.99</span>
+                        </p>
+                    </li>
+                    
+                    <li class="six columns">
+                        <p class="item-title">CHICKEN TERIYAKI
+                            <span class="item-price">4.99</span>
+                        </p>
+                    </li>
+                    
+                    <li class="six columns">
+                        <p class="item-title">
+                            <span class="item-price"></span>
+                        </p>
+                    </li>
+                    
+                    <li class="six columns">
+                        <p class="item-title">
+                            <span class="item-price"></span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="twelve menu-board" id="juice-menu">
+                <h2>Juice</h2>
+                <ul>
+                    <li class="six columns">
+                        <p class="juice-ingredients">
+                        <span class="juice-number">#001</span>
+                        Carrot, orange, moringa, ginger
+                        </p>
+                    </li>
+                    <li class="six columns">
+                        <p class="juice-ingredients">
+                        <span class="juice-number">#002</span>
+                        Pineapple, kale, coconut water, lime
+                        </p>
+                    </li>
+                    <li class="six columns">
+                        <p class="juice-ingredients">
+                        <span class="juice-number">#003</span>
+                        Beetroot, carrot, apple, lemon
+                        </p>
+                    </li>
+                    <li class="six columns">
+                        <p class="juice-ingredients">
+                        <span class="juice-number">#004</span>
+                        Apple, avocado, spinach, lime
+                        </p>
+                    </li>
+                    <li class="six columns">
+                        <p class="juice-ingredients">
+                        <span class="juice-number">#005</span>
+                        Cucumber, apple, kale, spinach, ginger
+                        </p>
+                    </li>
+                    <li class="six columns">
+                        <p class="juice-ingredients">
+                        <span class="juice-number">#006</span>
+                        Spinach, celery, cucumber, ginger, kale, lemon
+                        </p>
+                    </li>
+                    <li class="six columns">
+                        <p class="juice-ingredients">
+                        <span class="juice-number">#007</span>
+                        Strawberry, apple, lime
+                        </p>
+                    </li>
+                    <li class="six columns">
+                        <p class="juice-ingredients">
+                        <span class="juice-number">#008</span>
+                        Banana, orange, strawberry
+                        </p>
+                    </li>
+                    <li class="six columns">
+                        <p class="juice-ingredients">
+                        <span class="juice-number">Check our boards in your local store for specials</span>
+                        </p>
+                    </li>
+                </ul>
+                <span class="md-trigger" id="detox-link" data-modal="modal-5">View our Juice Detox</span>
+
+                <div class="md-modal md-effect-1" id="modal-1">
+                    <div class="md-content">
+                        <div class="md-description">
+                            <h3>ZERO to <span class="bb">HERO</span></h3>
+                            <p>A <span class="bb">3</span> day detox with our <span class="bb">5</span> best cold-pressed juices</p>
+                        </div>
+                        <div class="inner-content">
+                            <img id="zerotohero" src="images/cleanse/ZerotoHero.png" alt="Zero to Hero Juices"/>
+                        </div>
+                        <div class="detox-pricing">
+                            <h1><a class="juice-order" href="tel:+44 1442 877982">Call & Order for £60</a></h1>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="md-close">No Thanks</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-overlay"></div>
+            </div>
+
+            <div class="call-button-wrapper">
+                <hr>
+                <h1>You seem hungry</h1>
+                <a href="tel:+441442877982" title="Our number: +44 1442 877982">
+                    <button class="button button--ujarak">Give Us A Ring</button>
+                </a>
+            </div>
+        </div>
+        <!-- Photos Section -->
+        <a name="photo-slider" class="anchor"></a>
+        <div class="slider section">
+
+            <div class="photo-container">
+                <div class="center">
+                  <div><img src="images/yuhmm/macro_sashimi_slices.jpg"></div>
+                  <div><img src="images/yuhmm/entree.jpg"></div>
+                  <div><img src="images/yuhmm/macro_sushi_roll2.jpg"></div>
+                  <div><img src="images/yuhmm/sashimi_sun.jpg"></div>
+                  <div><img src="images/yuhmm/juice_napkin.jpg"></div>
+                  <div><img src="images/yuhmm/macro_sideshot.jpg"></div>
+                  <div><img src="images/yuhmm/macro_sashimi_slices.jpg"></div>
+                  <div><img src="images/yuhmm/macro_dragonroll.jpg"></div>
+                  <div><img src="images/yuhmm/fancy_as_shit.jpg"></div>
+                  <div><img src="images/yuhmm/macro_green_juice.jpg"></div>
+                  <div><img src="images/yuhmm/macro_sushi_spicy.jpg"></div>
+                  <div><img src="images/yuhmm/making.jpg"></div>
+                  <div><img src="images/yuhmm/sushi_feast.jpg"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Social Section -->
+        <a name="social-reviews" class="anchor"></a>
+        <div class="social section">
+            <div class="container review-container">
+                <a href="http://www.tripadvisor.com/Restaurant_Review-g887125-d7254783-Reviews-Zero_Juice_Sushi-Berkhamsted_Hertfordshire_England.html" title="Zero on TripAdvisor">
+                    <div class="review-cards" id="tripadvisor-card">
+                        <div class="review-container">
+                            <img src="images/review/tripadvisor.png" alt="Review from TripAdvisor: 5" class="source-logo" />
+                            <div class="review-content">
+                                <p>Zero Berkhamsted</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.facebook.com/ZeroBerkhamsted" title="Zero on Facebook">
+                    <div class="review-cards" id="facebook-card">
+                        <div class="review-container">
+                            <img src="images/review/facebook.png" alt="Review from TripAdvisor" class="source-logo" />
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tripadvisor.co.uk/Restaurant_Review-g503866-d9742483-Reviews-Zero-Harpenden_Hertfordshire_England.html" title="Zero on TripAdvisor">
+                    <div class="review-cards" id="tripadvisor-card-last">
+                        <div class="review-container">
+                            <img src="images/review/tripadvisor.png" alt="Review from TripAdvisor: 5" class="source-logo" />
+                            <div class="review-content">
+                                <p>Zero Harpenden</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <a name="footer" class="anchor"></a>
+        <footer>
+            <div class="footer container">
+                <p class="footy">Zero | Sushi & Juice Bar</p>
+                <p class="footy">Made with <img src="images/soosh.png" alt="sushi heart <3"/></p>
+                <p class="footy" id="author"><a href="https://twitter.com/WesMagness">Site by Wesley M</a></p>
+            </div>
+        </footer>
+    </body>
+<!-- End Document -->
+</html>
